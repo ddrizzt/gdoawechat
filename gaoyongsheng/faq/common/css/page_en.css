@@ -1,0 +1,11 @@
+body {
+    -webkit-touch-callout: none;
+    font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+    color: #333;
+    background-color: #FFF;
+    letter-spacing: .034em
+}
+
+.ux-card {
+    padding: 16px;
+}

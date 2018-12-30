@@ -1,0 +1,383 @@
+##Token:
+14_D05_v5S2ben0AwK9ouovy5uWlX3X-wAPYMcU-rDnrzeeQDx2cWEwMuuteSJVD0wn-dkwYHrrmEdhkMzNRl7NIZHRpdgbBxL6vsaHVTaH6GFehDyKcXalpIA5wPIMf9ULtXpJfSwVIBBCX68MCCTaABAPPG
+
+
+##Refresh Token:
+curl -X GET 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxb092ee30d85539a3&secret=5f36a50e094edc47d3832236e0e9381e'
+
+##Get CS list:
+curl -X GET 'https://api.weixin.qq.com/cgi-bin/customservice/getkflist?access_token=<TOKEN>'
+
+
+##Send msg to a user:
+curl -X POST \
+'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=<TOKEN>' \
+-d '{
+    "touser":"omQRb1eBuXdsBpn80zc0MEE1r8JU",
+    "msgtype":"text",
+    "text":
+    {
+         "content":"点这里 <a href=\"http://www.qq.com\">qq.com</a>"
+    }
+}'
+
+
+## GET IP
+curl -X GET 'https://api.weixin.qq.com/cgi-bin/getcallbackip?access_token=<TOKEN>'
+
+##GetUnionID
+curl -X GET \
+'https://api.weixin.qq.com/cgi-bin/user/info?access_token=<TOKEN>'
+
+##User Tag
+curl -X GET 'https://api.weixin.qq.com/cgi-bin/tags/get?access_token=<TOKEN>'
+
+##MenuInfo:
+##List menu:
+curl -X GET 'https://api.weixin.qq.com/cgi-bin/menu/get?access_token=16_4hMrM5hRf7hbcFOcrj9jI4M6Fsj1fk5Ze8cwy8gqLP4OgcX_NPtEWo5HE1z6qhI642q5VobDnmeuj-tpM576agliHbgW298Z9dewPs36jCu1UMG_9-V6cLleZ6mq_SRDsRH4jvmtt1BZA_caAFDaAGALQO'
+
+#Delete All Menus:  #!!!! BE CAREFUL !!!#
+curl -X GET 'https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=<TOKEN>'
+
+##Delete additional menu:
+curl -X POST \
+'https://api.weixin.qq.com/cgi-bin/menu/delconditional?access_token=<TOKEN>' \
+-d '{"menuid": "431322944"}'
+
+
+##Create additional menu:
+curl -X POST \
+'https://api.weixin.qq.com/cgi-bin/menu/addconditional?access_token=<TOKEN>' \
+-d '{
+      "button": [
+        {
+          "name": "产品",
+          "sub_button": [
+            {
+              "type": "view",
+              "name": "域名",
+              "url": "https://sg.godaddy.com/zh/domains",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "SSL证书",
+              "url": "https://sg.godaddy.com/zh/web-security",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "热门促销",
+              "url": "https://sg.godaddy.com/zh/promos/hot-deals",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "更多产品",
+              "url": "https://sg.godaddy.com/zh",
+              "sub_button": []
+            }
+          ]
+        },
+        {
+          "name": "客服",
+          "sub_button": [
+            {
+              "type": "miniprogram",
+              "name": "拨打电话",
+              "url": "https://sg.godaddy.com/zh/contact-us.aspx",
+              "sub_button": [],
+              "appid": "wxc69efb729a632b92",
+              "pagepath": "pages/support/support"
+            },
+            {
+              "type": "view",
+              "name": "常见问题",
+              "url": "https://140.143.116.30/faq/index.html",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "系统状态",
+              "url": "https://sg.godaddy.com/zh/system-status",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "域名搜索",
+              "url": "https://sg.godaddy.com/zh/offers/domains/godaddy-domains",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "域名评估",
+              "url": "https://sg.godaddy.com/domain-value-appraisal",
+              "sub_button": []
+            }
+          ]
+        },
+        {
+          "name": "我的",
+          "sub_button": [
+            {
+              "type": "miniprogram",
+              "name": "我的产品",
+              "url": "https://account.godaddy.com/products",
+              "sub_button": [],
+              "appid": "wxc69efb729a632b92",
+              "pagepath": "pages/myaccount/myaccount?activeIndex=1"
+            },
+            {
+              "type": "view",
+              "name": "我的续费",
+              "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb092ee30d85539a3&redirect_uri=https%3a%2f%2fwww.gaoyongsheng.cn%2foa%2fredir%2faccount%3fpath%3dbilling%253ffilter%253dexpires%2526subFilter%253d90&response_type=code&scope=snsapi_base&state=123#wechat_redirect",
+              "sub_button": []
+            },
+            {
+              "type": "miniprogram",
+              "name": "我的订单",
+              "url": "https://account.godaddy.com/orders",
+              "sub_button": [],
+              "appid": "wxc69efb729a632b92",
+              "pagepath": "pages/myaccount/myaccount?activeIndex=2"
+            },
+            {
+              "type": "miniprogram",
+              "name": "账户信息",
+              "url": "https://account.godaddy.com/",
+              "sub_button": [],
+              "appid": "wxc69efb729a632b92",
+              "pagepath": "pages/myaccount/myaccount?activeIndex=0"
+            }
+          ]
+        }
+      ],
+      "matchrule": {
+        "language": "zh_CN"
+      }
+}'
+
+
+=======================================================================================================================================
+curl -X POST \
+'https://api.weixin.qq.com/cgi-bin/menu/addconditional?access_token=<TOKEN>' \
+-d '{
+      "button": [
+        {
+          "name": "Products",
+          "sub_button": [
+            {
+              "type": "view",
+              "name": "Domain",
+              "url": "https://sg.godaddy.com/en/domains",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "SSL Certificate",
+              "url": "https://sg.godaddy.com/en/web-security",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "Hot Deals",
+              "url": "https://sg.godaddy.com/en/promos/hot-deals",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "More Products",
+              "url": "https://sg.godaddy.com/en",
+              "sub_button": []
+            }
+          ]
+        },
+        {
+          "name": "Support",
+          "sub_button": [
+            {
+              "type": "miniprogram",
+              "name": "Call Us",
+              "url": "https://www.godaddy.com/en/contact-us.aspx",
+              "sub_button": [],
+              "appid": "wxc69efb729a632b92",
+              "pagepath": "pages/support/support"
+            },
+            {
+              "type": "view",
+              "name": "FAQ",
+              "url": "https://140.143.116.30/faq/index_en.html",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "System Status",
+              "url": "https://sg.godaddy.com/en/system-status",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "Domain Search",
+              "url": "https://sg.godaddy.com/en/offers/domains/godaddy-domains",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "Domain Appraisal",
+              "url": "https://sg.godaddy.com/en/domain-value-appraisal",
+              "sub_button": []
+            }
+          ]
+        },
+        {
+          "name": "Account",
+          "sub_button": [
+            {
+              "type": "miniprogram",
+              "name": "My Products",
+              "url": "https://account.godaddy.com/products",
+              "sub_button": [],
+              "appid": "wxc69efb729a632b92",
+              "pagepath": "pages/myaccount/myaccount?activeIndex=1"
+            },
+            {
+              "type": "view",
+              "name": "My Renewals",
+              "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb092ee30d85539a3&redirect_uri=https%3a%2f%2fwww.gaoyongsheng.cn%2foa%2fredir%2faccount%3fpath%3dbilling%253ffilter%253dexpires%2526subFilter%253d90&response_type=code&scope=snsapi_base&state=123#wechat_redirect",
+              "sub_button": []
+            },
+            {
+              "type": "miniprogram",
+              "name": "My Orders",
+              "url": "https://account.godaddy.com/orders",
+              "sub_button": [],
+              "appid": "wxc69efb729a632b92",
+              "pagepath": "pages/myaccount/myaccount?activeIndex=2"
+            },
+            {
+              "type": "miniprogram",
+              "name": "My Profile",
+              "url": "https://account.godaddy.com/",
+              "sub_button": [],
+              "appid": "wxc69efb729a632b92",
+              "pagepath": "pages/myaccount/myaccount?activeIndex=0"
+            }
+          ]
+        }
+      ],
+      "matchrule": {
+        "language": "en"
+      }
+    }
+}'
+
+=======================================================================================================================================
+## Create default Menu:
+
+curl -X POST \
+'https://api.weixin.qq.com/cgi-bin/menu/create?access_token=<TOKEN>' \
+-d '{
+      "button": [
+        {
+          "name": "产品",
+          "sub_button": [
+            {
+              "type": "view",
+              "name": "域名",
+              "url": "https://sg.godaddy.com/zh/domains",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "SSL证书",
+              "url": "https://sg.godaddy.com/zh/web-security",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "热门促销",
+              "url": "https://sg.godaddy.com/zh/promos/hot-deals",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "更多产品",
+              "url": "https://sg.godaddy.com/zh",
+              "sub_button": []
+            }
+          ]
+        },
+        {
+          "name": "客服",
+          "sub_button": [
+            {
+              "type": "miniprogram",
+              "name": "拨打电话",
+              "url": "https://sg.godaddy.com/zh/contact-us.aspx",
+              "sub_button": [],
+              "appid": "wxc69efb729a632b92",
+              "pagepath": "pages/support/support"
+            },
+            {
+              "type": "view",
+              "name": "常见问题",
+              "url": "https://140.143.116.30/faq/index.html",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "系统状态",
+              "url": "https://sg.godaddy.com/zh/system-status",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "域名搜索",
+              "url": "https://sg.godaddy.com/zh/offers/domains/godaddy-domains",
+              "sub_button": []
+            },
+            {
+              "type": "view",
+              "name": "域名评估",
+              "url": "https://sg.godaddy.com/zh/domain-value-appraisal",
+              "sub_button": []
+            }
+          ]
+        },
+        {
+          "name": "我的",
+          "sub_button": [
+            {
+              "type": "miniprogram",
+              "name": "我的产品",
+              "url": "https://account.godaddy.com/products",
+              "sub_button": [],
+              "appid": "wxc69efb729a632b92",
+              "pagepath": "pages/myaccount/myaccount?activeIndex=1"
+            },
+            {
+              "type": "view",
+              "name": "我的续费",
+              "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb092ee30d85539a3&redirect_uri=https%3a%2f%2fwww.gaoyongsheng.cn%2foa%2fredir%2faccount%3fpath%3dbilling%253ffilter%253dexpires%2526subFilter%253d90&response_type=code&scope=snsapi_base&state=123#wechat_redirect",
+              "sub_button": []
+            },
+            {
+              "type": "miniprogram",
+              "name": "我的订单",
+              "url": "https://account.godaddy.com/orders",
+              "sub_button": [],
+              "appid": "wxc69efb729a632b92",
+              "pagepath": "pages/myaccount/myaccount?activeIndex=2"
+            },
+            {
+              "type": "miniprogram",
+              "name": "账户信息",
+              "url": "https://account.godaddy.com/",
+              "sub_button": [],
+              "appid": "wxc69efb729a632b92",
+              "pagepath": "pages/myaccount/myaccount?activeIndex=0"
+            }
+          ]
+        }
+      ]
+}'

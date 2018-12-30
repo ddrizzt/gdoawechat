@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>GoDaddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="./downloadbuild/css/downloadPage.css">
+    <link rel="stylesheet" href="./downloadbuild/css/style.css">
+</head>
+
+<body>
+<div class="foot">
+    <!--遮罩层-->
+    <div class="weixin-tip">
+        <p>
+            <img src=""/>
+        </p>
+    </div>
+</div>
+</body>
+
+
+</html>
+<script type="text/javascript" src="./downloadbuild/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="./downloadbuild/js/iscroll.js"></script>
+<script type="text/javascript" src="./downloadbuild/js/navbarscroll.js"></script>
+<script type="text/javascript" src="./downloadbuild/js/common_redir.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        $('.guide-ul').navbarscroll();
+        $('#sass').navbarscroll();
+        $(".guide-li a").on("click", function () {
+            if ($(this).attr('href') == '#buildingStation' || $(this).attr('href') == '#mainEngine' ||
+                $(this).attr('href') == '#onlineMarketing') {
+                var id = $(this).attr('href');
+                handler(id)
+            } else {
+                var id = $(this).attr('href');
+                handler(id);
+            }
+        });
+
+        function handler(hash) {
+            var target = document.getElementById(hash.slice(1));
+            if (!target) return;
+            var targetOffset = $(target).offset().top - 52;
+            $('html,body').animate({
+                scrollTop: targetOffset
+            }, 200);
+        }
+
+        $('a[href^=#][href!=#]').click(function () {
+            handler(this.hash);
+        });
+        if (location.hash) {
+            handler(location.hash);
+        }
+    })
+
+    function getURLParameter(name) {
+        if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search)) {
+            return decodeURIComponent(name[1]);
+        }
+    }
+
+    if (location.search.includes('code=') && location.search.includes('state=')) {
+        var lang_suffix = '';
+        if (location.search.includes('lang=')) {
+            lang_suffix = '&lang=' + getURLParameter('lang');
+        }
+
+        location.href = 'https://www.gaoyongsheng.cn/login_godaddy.html?nopayment=1&code=' + getURLParameter('code') + lang_suffix;
+    }
+
+</script>
+

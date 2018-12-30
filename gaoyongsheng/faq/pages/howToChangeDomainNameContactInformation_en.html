@@ -1,0 +1,137 @@
+<html lang="en-SG">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en-SG">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+    <meta name="description" content="You can change a domain's contact information at any time. Domains have four sets of contacts, which are listed below after the instructions.">
+    <title>Change domain contact information | Account Management - GoDaddy Help</title>
+    <link rel="stylesheet" href="../common/css/page_en.css">
+</head>
+<body class="app-background godaddy">
+<div id="page-wrap-element">
+    <div id="content-body" class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="ux-card help-card article-container"><h1 class="h2 no-top">Change domain contact information</h1>
+                    <div class="help-articles">
+                        <script data-help-p13n="domains">
+
+                            var p13 = [];
+
+                            function noNonActives() {
+                                var a = 0;
+                                for (var b = 0; b < p13nData.domains.length; b++) {
+                                    if (p13nData.domains[b].status === "ACTIVE") {
+                                        p13[a] = (p13nData.domains[b]);
+                                        a++;
+                                    }
+                                }
+                            }
+
+                            function goToSettingsPage() {
+                                for (var k = 0; k < p13.length; k++) {
+                                    var goToSettings = [];
+                                    goToSettings[k] = "<li><a href='https://dcc.godaddy.com/manage/" + p13[k].domain + "/settings' target='new'>" + p13[k].domain + "</a>.</li>";
+                                    $("#listForSettingsPage").append(goToSettings[k]);
+                                }
+                            }
+
+                            function onHelpDataReady() {
+                                if (typeof p13nData === 'undefined') {
+                                    return;
+                                }
+                                if (p13nData.error) {
+                                    console.log(p13nData.error);
+                                }
+                                if (p13nData.domains) {
+                                    noNonActives();
+                                    goToSettingsPage();
+                                    $("p#notLoggedIn").hide();
+                                    $("div#pData").show();
+                                    $("div#defaultContent").hide();
+                                }
+                            }
+
+                        </script>
+
+                        <br>
+                        <p>You can change a domain's contact information at any time. Domains have four sets of contacts, which are listed below after the instructions. </p>
+                        <div class="alert alert-warning"><span class="uxicon uxicon-lightning"></span> <strong>Required: </strong>To make <strong>bulk updates</strong> to contact information for multiple domains at a time, you'll need to <a target="_blank" href="https://sg.godaddy.com/help/create-a-preset-profile-24627">create a Preset Profile</a>. Once you create the profile, you can <a target="_blank" href="https://sg.godaddy.com/help/add-a-domain-to-a-preset-profile-24628">add in all the
+                            domains</a>
+                            whose contact information you want to change.
+                        </div>
+                        <br>
+
+                        <iframe class="help-video" src="https://www.youtube.com/embed/uCoU92PK0EI" frameborder="0" allowfullscreen=""></iframe>
+                        <br>
+                        <p class="note"><span class="uxicon uxicon-help"></span> <strong>Note: </strong>Changing your <em>domain</em> contact information does not change your GoDaddy <em>account's</em> email address information. If you want to update that, see <a target="_blank" href="https://sg.godaddy.com/help/update-my-godaddy-account-profile-27250">Update my GoDaddy account profile</a></p><br>
+
+                        <div class="alert alert-warning"><span class="uxicon uxicon-lightning"></span> <strong>Required:</strong> When you update your Registrant info on a domain, this new process sends an email to: <br> a.) the shopper email address, <br>b.) the existing email address being replaced, and <br> c.) the new email address for the Registrant contact.
+                            <p>Either the shopper or the existing registrant email address AND the new registrant email address are <strong>required</strong> to approve the update. If these email addresses are the same, only one email and approval will be <strong>required</strong>. See <a href="https://sg.godaddy.com/help/new-icann-registrant-update-requirements-24654">New ICANN Registrant update requirements</a> for more details.</p>
+                        </div>
+
+                        <p class="note" id="notLoggedIn">Looks like you're not logged in. If you log in above (under <img style="border:1px solid black;" src="https://img1.wsimg.com/support/images/domains/reuse/domains-hello-login-01.png" height="15" alt="Text Icon">), we can save you a couple of steps.</p>
+
+
+                        <!--**************** PDATA FOLLOWS ****************-->
+
+                        <div id="pData" style="display:none">
+                            <ol>
+                                <li>Click a domain name on the list to go to its <strong>Domain Settings</strong> page.
+                                    <ul id="listForSettingsPage"></ul>
+                                </li>
+                                <li>Under <strong>Contact Information</strong>, click <strong>Edit</strong>. (<strong>Note:</strong> if you don't see the <strong>Edit</strong> link, you may have <strong>Domain Privacy</strong> turned on. Click the <strong>View personal information</strong> link, and then you'll be able to click the <strong>Edit</strong> link.)</li>
+                                <ul>
+                                    <li>To edit <strong>All Contacts</strong>, enter the <strong>Contact</strong>, <strong>Address</strong>, <strong>Phone</strong>, and <strong>Email</strong> information you want to update, and then click <strong>OK</strong>.</li>
+                                    <li>To edit each individual contact, clear the <strong>Use for all contact types</strong> check box and enter the information you want to update.</li>
+                                </ul>
+                                <li>Click <strong>Save</strong>.</li>
+                            </ol>
+                        </div>
+
+                        <!--**************** END PDATA ****************-->
+
+                        <div id="defaultContent">
+                            <ol>
+                                <li>Go to the <strong>Domains Settings</strong> page.</li>
+                                <li>Under <strong>Contact Information</strong>, click <strong>Edit</strong>. (<strong>Note:</strong> if you don't see the <strong>Edit</strong> link, you may have <strong>Domain Privacy</strong> turned on. Click the <strong>View personal information</strong> link, and then you'll be able to click the <strong>Edit</strong> link.)</li>
+                                <ul>
+                                    <li>To edit <strong>All Contacts</strong>, enter the <strong>Contact</strong>, <strong>Address</strong>, <strong>Phone</strong>, and <strong>Email</strong> information you want to update, and then click <strong>OK</strong>.</li>
+                                    <li>To edit each individual contact, clear the <strong>Use for all contact types</strong> check box and enter the information you want to update.</li>
+                                </ul>
+                                <li>Click <strong>Save</strong>.</li>
+                            </ol>
+                        </div>
+
+                        <p>The four different sets of contacts for domains are:</p>
+
+                        <ul>
+                            <li>The <strong>Registrant</strong> is the contact information for the <strong>owner</strong> of the domain. Changing the domain name's registrant prevents you from transferring the domain to a new registrar for 60 days (see <strong>Notes</strong> section below). However, if you want to transfer ownership to another GoDaddy customer, you should use <a href="https://sg.godaddy.com/help/move-a-domain-to-another-godaddy-account-822">an account change</a>.</li>
+                            <li>The <strong>Administrator</strong> information is used for transferring between registrars.</li>
+                            <li><strong>Technical</strong> and <strong>Billing</strong> contacts are not commonly used.</li>
+                        </ul>
+                        <h2>Notes</h2>
+                        <p>You voluntarily agree to a 60-day lock that prevents you from transferring your domain name when you update the <strong>Organization</strong> field for the registrant contact, or when you update the <strong>First name</strong>, <strong>Last name</strong>, or <strong>Email address</strong> fields for the registrant contact if an organization is not the legal registrant for your domain name.</p>
+
+                        <p class="note"><span class="uxicon uxicon-help"></span> <strong>Note:</strong> The 60-day lock does not apply to .au domain names. We send .au transfer-related information to the registrant contact's email address as it displays in the Whois database.</p>
+                        <p class="note"><span class="uxicon uxicon-help"></span> <strong>Note:</strong> If your domain name has privacy, see <a href="https://sg.godaddy.com/help/update-contact-information-for-domains-with-privacy-2607">Update contact information for domains with privacy</a> for more information.</p>
+
+
+                        <h2>More info</h2>
+                        <ul>
+                            <li><a target="_blank" href="https://sg.godaddy.com/help/update-my-godaddy-account-profile-27250">Update my GoDaddy account profile</a></li>
+                            <li><a target="_blank" href="https://sg.godaddy.com/help/new-icann-registrant-update-requirements-24654">New ICANN Registrant update requirements</a>
+                            </li>
+                            <li><a target="_blank" href="https://sg.godaddy.com/help/dive-in-browse-essential-articles-list-26986">Using domains</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

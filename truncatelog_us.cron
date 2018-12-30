@@ -1,0 +1,12 @@
+0 3 * * 0 echo "" > /data/logs/server_oa.log
+0 4 * * 0 echo "" > /data/logs/server.log
+
+0 1 * * * cd /usr/share/nginx/html/gaoyongsheng/receiptImage && find . -type f -mtime +30 -exec rm -f {} \;
+
+5 1 * * * node /mnt/wechat-mini-master/server/controllers/getPhoneList.js
+9 1 * * * node /mnt/wechat-mini-master/server/controllers/getAgreementsDaily.js
+
+*/5 * * * * /mnt/wechat-oa-master/start_up.sh >> /data/logs/restart.log
+*/5 * * * * /mnt/wechat-mini-master/server/startup.sh >> /data/logs/restart.log
+
+

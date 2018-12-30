@@ -1,0 +1,5 @@
+0 3 * * 0 echo "" > /data/logs/server_oa.log
+
+*/5 * * * * /mnt/wechat-oa-master/start_up.sh >> /data/logs/restart.log
+
+
